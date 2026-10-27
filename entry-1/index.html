@@ -5,13 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>The Garden Store — Seeds for New York City</title>
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="intro.css">
 </head>
 <body>
 
 <header class="top">
-<div class="wrap logo-row">
-  <img class="site-logo" src="the_garden_store_header_.png" alt="The Garden Store">
-</div>
+  <div class="wrap logo-row">
+    <img class="site-logo" src="the_garden_store_header_.png" alt="The Garden Store">
+  </div>
   <nav aria-label="Main">
     <a href="#shop">Seeds</a>
     <a href="#sow">When to sow</a>
@@ -21,20 +22,18 @@
 </header>
 
 <main>
-  <section class="hero">
-    <div class="wrap">
-      <div>
-        <div class="stack" aria-hidden="true"><span>garden</span><span>garden</span><span>garden</span><span>garden</span><span>garden</span></div>
-        <h1>Seeds for fire escapes, window boxes and stoop planters.</h1>
-        <p>The Garden Store packs small-batch seeds for small New York spaces. Everything we sell grows well in a few hours of city sun, and every packet comes with sowing dates for the five boroughs.</p>
-        <a class="btn" href="#shop">Shop seeds</a><a class="btn alt" href="#visit">Find the store</a>
+  <section class="intro">
+    <div class="frame" id="frame">
+      <div class="window" id="window">
+        <!-- Replace this div with: <img src="your-photo.jpg" alt="Describe your photo"> -->
+        <div class="win-ph">Your photo here<small>replace this with an img tag</small></div>
       </div>
-      <div>
-        <!-- Replace with <img src="hero.jpg" alt="..."> -->
-        <div class="ph tall">Hero image</div>
-        <div class="note">Free seed swap every first Sunday of the month.</div>
-      </div>
+      <svg id="trees" viewBox="0 0 1000 560" aria-hidden="true"></svg>
     </div>
+    <h1>Seeds for fire escapes, window boxes and stoop planters.</h1>
+    <p>The Garden Store packs small-batch seeds for small New York spaces. Everything we sell grows well in a few hours of city sun, and every packet comes with sowing dates for the five boroughs.</p>
+    <a class="btn" href="#shop">Shop seeds</a><a class="btn alt" href="#visit">Find the store</a>
+    <div class="note">Free seed swap every first Sunday of the month.</div>
   </section>
 
   <section class="strip" aria-label="Image gallery">
@@ -100,6 +99,7 @@
   <div id="cartBody"></div>
 </aside>
 
+<script src="intro.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

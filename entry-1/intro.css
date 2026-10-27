@@ -1,0 +1,60 @@
+/* Intro: tree frame with a photo cutout */
+:root{
+  --bark:#8a5a2b; --trunk:#f3ead2;
+  --lf-pale:#f1f5dc; --lf-mid:#a9c76d; --lf-dark:#3f7f3a; --lf-line:#1f5a2a;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bark:#b88a55; --trunk:#3a3524;
+    --lf-pale:#34472a; --lf-mid:#5c8a3a; --lf-dark:#86b85a; --lf-line:#a8d07a;
+  }
+}
+
+.intro{position:relative;text-align:center;padding:28px 0 60px;background:var(--white);overflow:hidden}
+.intro::before{ /* soft paper grain */
+  content:"";position:absolute;inset:0;opacity:.35;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .4 0 0 0 0 .2 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.intro > *{position:relative;z-index:1}
+
+.frame{position:relative;width:min(100%,1040px);margin:0 auto;aspect-ratio:1000/560;--px:0;--py:0}
+
+/* the cutout; JS replaces this fallback ellipse with an organic shape */
+.window{position:absolute;inset:0;overflow:hidden;clip-path:ellipse(31% 30% at 50% 51%);animation:reveal 1.6s ease-out both}
+.window > img,.win-ph{width:100%;height:100%;object-fit:cover;display:block;animation:settle 2.6s ease-out both}
+.win-ph{display:grid;place-items:center;padding:20px;text-align:center;color:#f3ead2;font-family:var(--head);font-size:clamp(18px,3vw,34px);
+  background:radial-gradient(ellipse at 35% 65%,#6b4a2a 0%,#3a3a24 38%,#1c2a1f 75%)}
+.win-ph small{display:block;font:clamp(11px,1.4vw,15px) var(--body);opacity:.8;margin-top:6px}
+@keyframes reveal{from{opacity:0}}
+@keyframes settle{from{transform:scale(1.1)}}
+
+#trees{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+#leaves{transform:translate(calc(var(--px) * 1px),calc(var(--py) * 1px));transition:transform .5s ease-out}
+
+/* ink drawing styles */
+.trunk{fill:var(--trunk);stroke:var(--bark);stroke-width:2;stroke-linejoin:round}
+.hatch{fill:none;stroke:var(--bark);stroke-width:1.1;stroke-linecap:round;opacity:.7}
+.bo{fill:none;stroke:var(--bark);stroke-linecap:round}
+.bi{fill:none;stroke:var(--trunk);stroke-linecap:round}
+.twig{fill:none;stroke:var(--bark);stroke-width:1.3;stroke-linecap:round}
+.p0{fill:var(--lf-pale)}.p1{fill:var(--lf-mid)}.p2{fill:var(--lf-dark)}
+.lf path:not(.vein){stroke:var(--lf-line);stroke-width:1.1;stroke-linejoin:round}
+.vein{fill:none;stroke:var(--lf-line);stroke-width:.8;opacity:.65}
+
+/* leaves grow in around the window, then sway */
+.lf{animation:grow .9s cubic-bezier(.2,.8,.3,1) both}
+@keyframes grow{from{transform:scale(0)}to{transform:scale(1)}}
+.sway{transform-origin:500px 285px;animation:sway 6s ease-in-out infinite alternate}
+.s1{animation-duration:7.5s;animation-delay:-2s}.s2{animation-duration:5.5s;animation-delay:-4s}
+.s3{animation-duration:8s;animation-delay:-1s}.s4{animation-duration:6.5s;animation-delay:-3s}.s5{animation-duration:7s;animation-delay:-5s}
+@keyframes sway{from{transform:rotate(-.7deg)}to{transform:rotate(.7deg)}}
+
+/* intro text */
+.intro h1{font-size:clamp(26px,4vw,40px);color:var(--forest);letter-spacing:.05em;margin:22px auto 12px;max-width:24ch}
+.intro p{max-width:50ch;margin:0 auto 22px}
+.intro .note{margin-top:26px}
+
+@media (prefers-reduced-motion:reduce){
+  .lf,.sway,.window,.win-ph,.window>img{animation:none!important}
+  #leaves{transition:none}
+}

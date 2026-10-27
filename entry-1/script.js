@@ -113,7 +113,8 @@ $("#news").addEventListener("submit", e => {
   e.target.reset();
 });
 
-/* ---------- logo upload ---------- */
+/* ---------- logo upload (only runs if the upload box exists) ---------- */
+if ($("#logoSlot")) {
 const slot = $("#logoSlot");
 $("#logoFile").addEventListener("change", e => {
   const f = e.target.files[0];
@@ -136,6 +137,8 @@ $("#logoReset").onclick = () => {
   $("#logoFile").value = "";
   $("#logoReset").style.display = "none";
 };
+
+}
 
 renderGrid();
 renderCart();
