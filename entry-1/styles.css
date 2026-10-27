@@ -3,8 +3,8 @@
   --head:Trattatello,"Luminari","Apple Chancery",fantasy;
   --body:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
   color-scheme:light;
-  --paper:#e4ebbd; --sage:#c7d58f; --moss:#8a9b3e; --olive:#5d6b24; --forest:#2c4020; --leaf:#4f8a3a; --tomato:#d9553f;
-  --white:#f8f9ec; --card:#f1f4d8; --ink:#24331a;
+  --paper:#f0f5d6; --sage:#d9e4ae; --moss:#a3b360; --olive:#667528; --forest:#2c4020; --leaf:#4f8a3a; --tomato:#d9553f;
+  --white:#fbfcf1; --card:#f7f9e4; --ink:#24331a;
   box-sizing:border-box;
   padding-top:env(safe-area-inset-top,0px);
 }
@@ -137,4 +137,3 @@ aside header h2{font-size:32px;color:var(--forest)}
   .btn.alt{margin:10px 0 0}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
-.site-logo{display:block;width:min(100%,600px);height:auto;margin:0 auto}

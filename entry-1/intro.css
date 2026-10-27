@@ -1,7 +1,7 @@
 /* Intro: tree frame with a photo cutout */
 :root{
-  --bark:#8a5a2b; --trunk:#f3ead2;
-  --lf-pale:#f1f5dc; --lf-mid:#a9c76d; --lf-dark:#3f7f3a; --lf-line:#1f5a2a;
+  --bark:#8a5a2b; --trunk:#faf3df;
+  --lf-pale:#f7faea; --lf-mid:#bdd685; --lf-dark:#4a8a42; --lf-line:#1f5a2a;
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
