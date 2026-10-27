@@ -137,3 +137,4 @@ aside header h2{font-size:32px;color:var(--forest)}
   .btn.alt{margin:10px 0 0}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+.site-logo{display:block;width:min(100%,600px);height:auto;margin:0 auto}
