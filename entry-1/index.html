@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Garden Store — Seeds for New York City</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap logo-row">
+    <!-- LOGO SPACE: click to upload your hand-drawn logo, or replace this div with <img src="your-logo.png" alt="The Garden Store"> -->
+    <div class="logo-slot" id="logoSlot">
+      <label for="logoFile">Add your hand-drawn logo<small>click to choose a PNG, JPG or SVG</small></label>
+      <input type="file" id="logoFile" accept="image/*" aria-label="Upload logo image">
+    </div>
+    <button class="logo-reset" id="logoReset" type="button">Remove logo</button>
+  </div>
+  <nav aria-label="Main">
+    <a href="#shop">Seeds</a>
+    <a href="#sow">When to sow</a>
+    <a href="#visit">Visit us</a>
+    <button class="cart-btn" id="openCart" type="button">Basket<b id="count">0</b></button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <div class="stack" aria-hidden="true"><span>garden</span><span>garden</span><span>garden</span><span>garden</span><span>garden</span></div>
+        <h1>Seeds for fire escapes, window boxes and stoop planters.</h1>
+        <p>The Garden Store packs small-batch seeds for small New York spaces. Everything we sell grows well in a few hours of city sun, and every packet comes with sowing dates for the five boroughs.</p>
+        <a class="btn" href="#shop">Shop seeds</a><a class="btn alt" href="#visit">Find the store</a>
+      </div>
+      <div>
+        <!-- Replace with <img src="hero.jpg" alt="..."> -->
+        <div class="ph tall">Hero image</div>
+        <div class="note">Free seed swap every first Sunday of the month.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="strip" aria-label="Image gallery">
+    <div class="wrap">
+      <div class="ph">Image 1</div>
+      <div class="ph">Image 2</div>
+      <div class="ph">Image 3</div>
+      <div class="ph">Image 4</div>
+    </div>
+  </section>
+
+  <section class="shop" id="shop">
+    <div class="wrap">
+      <div class="shop-head">
+        <h2>Seed packets</h2>
+        <div class="filters" role="group" aria-label="Filter seeds">
+          <button type="button" data-f="all" aria-pressed="true">All</button>
+          <button type="button" data-f="veg" aria-pressed="false">Vegetables</button>
+          <button type="button" data-f="herb" aria-pressed="false">Herbs</button>
+          <button type="button" data-f="flower" aria-pressed="false">Flowers</button>
+        </div>
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <section class="sow" id="sow">
+    <div class="wrap">
+      <h2>When to sow in New York</h2>
+      <div class="sow-list">
+        <div><h3>March to April</h3><p>Start tomatoes, peppers and basil indoors on a bright windowsill. Sow peas and spinach outside once the soil thaws.</p></div>
+        <div><h3>Mid May</h3><p>After the last frost, move seedlings out and sow cucumbers, zinnias, sunflowers and nasturtiums straight into the pot.</p></div>
+        <div><h3>August</h3><p>Sow lettuce, cilantro and radishes again for a second harvest that lasts through the first frost in November.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="wrap">
+      <div>
+        <h2>Come say hello</h2>
+        <p>Visit the shop to flip through the packets and ask us what to plant in your north-facing window. Orders placed online can be picked up in store the same day or shipped within New York State.</p>
+        <form class="news" id="news">
+          <input type="email" required placeholder="Your email for sowing reminders" aria-label="Email address">
+          <button type="submit">Sign up</button>
+        </form>
+        <p class="news-msg" id="newsMsg" role="status"></p>
+      </div>
+      <div class="hours">
+        <h3>The Garden Store</h3>
+        <p>New York, NY<br>Add your street address here</p>
+        <dl><dt>Mon to Fri</dt><dd>10am to 7pm</dd><dt>Saturday</dt><dd>9am to 6pm</dd><dt>Sunday</dt><dd>10am to 5pm</dd></dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 The Garden Store, New York City.</footer>
+
+<div class="veil" id="veil"></div>
+<aside id="cart" aria-label="Basket" aria-hidden="true">
+  <header><h2>Your basket</h2><button class="x" id="closeCart" type="button" aria-label="Close basket">×</button></header>
+  <div id="cartBody"></div>
+</aside>
+
+<script src="script.js"></script>
+</body>
+</html>
