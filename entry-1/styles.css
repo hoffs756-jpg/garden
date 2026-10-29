@@ -3,7 +3,7 @@
   --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
   color-scheme:light;
   /* very light backgrounds, dark readable text */
-  --paper:#fefefb; --white:#ffffff; --sage:#f1f7e6; --mint:#ecf7f2; --pink:#fde6ee; --accent:#d6ebb8;
+  --paper:#f8fbef; --white:#ffffff; --sage:#ecf4dc; --mint:#ecf7f2; --pink:#fde6ee; --accent:#d6ebb8;
   --line:#e3ead3; --olive:#5d7a35; --forest:#2c4427; --leaf:#6fae5d; --ink:#2a3a26;
   padding-top:env(safe-area-inset-top,0px);
 }
@@ -11,9 +11,9 @@ html{scroll-behavior:smooth;scroll-padding-top:84px}
 *{box-sizing:border-box}
 body{margin:0;color:var(--ink);font:400 17px/1.7 var(--body);
   background:
-   radial-gradient(40vw 40vw at 5% 5%,#eef6dc,transparent 70%),
+   radial-gradient(45vw 45vw at 5% 5%,#e3f0c8,transparent 70%),
    radial-gradient(36vw 36vw at 98% 40%,#fdeef3,transparent 70%),
-   radial-gradient(44vw 44vw at 10% 90%,#e8f5ef,transparent 70%),
+   radial-gradient(48vw 48vw at 10% 90%,#dcf0e4,transparent 70%),
    var(--paper);
   background-attachment:fixed}
 h1,h2,h3{font-family:var(--head);font-weight:600;line-height:1.15;margin:0;color:var(--forest);letter-spacing:-.015em}
