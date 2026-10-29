@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>The Garden Store — Seeds for New York City</title>
+<title>The Garden Store</title>
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="intro.css">
 </head>
@@ -13,13 +13,13 @@
   <div class="wrap logo-row">
     <img class="site-logo" src="the_garden_store_header_.png" alt="The Garden Store">
   </div>
+</header>
   <nav aria-label="Main">
     <a href="#shop">Seeds</a>
     <a href="#sow">When to sow</a>
     <a href="#visit">Visit us</a>
     <button class="cart-btn" id="openCart" type="button">Basket<b id="count">0</b></button>
   </nav>
-</header>
 
 <main>
   <section class="intro">
@@ -33,8 +33,12 @@
     <h1>Seeds for fire escapes, window boxes and stoop planters.</h1>
     <p>The Garden Store packs small-batch seeds for small New York spaces. Everything we sell grows well in a few hours of city sun, and every packet comes with sowing dates for the five boroughs.</p>
     <a class="btn" href="#shop">Shop seeds</a><a class="btn alt" href="#visit">Find the store</a>
-    <div class="note">Free seed swap every first Sunday of the month.</div>
+    <div class="note">★ Free seed swap every first Sunday of the month</div>
+    <div class="corners"><span>Vol.1<br>Spring 2027</span><span>Vegetables<br>Herbs<br>Flowers<br>Pollinators</span></div>
   </section>
+
+  <pre class="bed" aria-hidden="true"></pre>
+  <p class="bed-tip">click the garden to replant</p>
 
   <section class="strip" aria-label="Image gallery">
     <div class="wrap">
@@ -60,6 +64,7 @@
     </div>
   </section>
 
+  <div class="divider" aria-hidden="true"></div>
   <section class="sow" id="sow">
     <div class="wrap">
       <h2>When to sow in New York</h2>
@@ -71,6 +76,7 @@
     </div>
   </section>
 
+  <div class="divider" aria-hidden="true"></div>
   <section class="visit" id="visit">
     <div class="wrap">
       <div>
@@ -89,6 +95,7 @@
       </div>
     </div>
   </section>
+<pre class="bed" aria-hidden="true"></pre>
 </main>
 
 <footer>© 2026 The Garden Store, New York City.</footer>
@@ -100,6 +107,7 @@
 </aside>
 
 <script src="intro.js"></script>
+<script src="garden.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

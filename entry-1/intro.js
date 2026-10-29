@@ -109,7 +109,7 @@
     const ang = Math.atan2(y - cy, x - cx);
     const sec = sectors[Math.floor((((ang + Math.PI * 2) % (Math.PI * 2)) / (Math.PI * 2)) * 6) % 6];
     const w = len * 0.55, r = rnd();
-    const cls = r < 0.5 ? "p0" : r < 0.82 ? "p1" : "p2";
+    const cls = r < 0.42 ? "p0" : r < 0.72 ? "p1" : r < 0.88 ? "p2" : "p3";
     const delay = Math.round(((((ang + Math.PI * 2.5) % (Math.PI * 2)) / (Math.PI * 2)) * 1000) + R(0, 350));
     const g = el("g", { transform: `translate(${f1(x)} ${f1(y)}) rotate(${Math.round(rot)})` }, sec);
     const inner = el("g", { class: "lf", style: `animation-delay:${delay}ms` }, g);
