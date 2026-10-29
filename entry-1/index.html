@@ -3,56 +3,44 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>The Garden Store</title>
+<title>The Garden Store — Seeds for New York City</title>
 <link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="intro.css">
 </head>
 <body>
 
-<header class="top">
-  <div class="wrap logo-row">
+<!-- PAGE 1: full-screen header image -->
+<header class="landing" id="top">
+  <div class="center">
     <img class="site-logo" src="the_garden_store_header_.png" alt="The Garden Store">
+    <p class="tag">Seeds for New York City</p>
+    <a class="scroll" href="#welcome">Scroll ↓</a>
   </div>
+  <pre class="bed" aria-hidden="true"></pre>
 </header>
-  <nav aria-label="Main">
-    <a href="#shop">Seeds</a>
-    <a href="#sow">When to sow</a>
-    <a href="#visit">Visit us</a>
-    <button class="cart-btn" id="openCart" type="button">Basket<b id="count">0</b></button>
-  </nav>
+
+<nav aria-label="Main">
+  <a href="#top">Home</a>
+  <a href="#shop">Seeds</a>
+  <a href="#sow">When to sow</a>
+  <a href="#visit">Visit us</a>
+  <button class="cart-btn" id="openCart" type="button">Basket<b id="count">0</b></button>
+</nav>
 
 <main>
-  <section class="intro">
-    <div class="frame" id="frame">
-      <div class="window" id="window">
-        <!-- Replace this div with: <img src="your-photo.jpg" alt="Describe your photo"> -->
-        <div class="win-ph">Your photo here<small>replace this with an img tag</small></div>
-      </div>
-      <svg id="trees" viewBox="0 0 1000 560" aria-hidden="true"></svg>
-    </div>
-    <h1>Seeds for fire escapes, window boxes and stoop planters.</h1>
-    <p>The Garden Store packs small-batch seeds for small New York spaces. Everything we sell grows well in a few hours of city sun, and every packet comes with sowing dates for the five boroughs.</p>
-    <a class="btn" href="#shop">Shop seeds</a><a class="btn alt" href="#visit">Find the store</a>
-    <div class="note">Free seed swap every first Sunday of the month</div>
-    <div class="corners"><span>Vol.1<br>Spring 2027</span><span>Vegetables<br>Herbs<br>Flowers<br>Pollinators</span></div>
-  </section>
-
-  <pre class="bed" aria-hidden="true"></pre>
-  <p class="bed-tip">click the garden to replant</p>
-
-  <section class="strip" aria-label="Image gallery">
-    <div class="wrap">
-      <div class="ph">Image 1</div>
-      <div class="ph">Image 2</div>
-      <div class="ph">Image 3</div>
-      <div class="ph">Image 4</div>
+  <section class="welcome" id="welcome">
+    <div class="wrap narrow">
+      <p class="eyebrow">Welcome</p>
+      <h1>Seeds for fire escapes, window boxes and stoop planters.</h1>
+      <p class="lead">The Garden Store packs small-batch seeds for small New York spaces. Everything we sell grows well in a few hours of city sun, and every packet comes with sowing dates for the five boroughs.</p>
+      <a class="btn" href="#shop">Shop seeds</a><a class="btn alt" href="#visit">Find the store</a>
+      <p><span class="note">Free seed swap every first Sunday of the month</span></p>
     </div>
   </section>
 
   <section class="shop" id="shop">
     <div class="wrap">
       <div class="shop-head">
-        <h2>Seed packets</h2>
+        <div><p class="eyebrow">01 · Shop</p><h2>Seed packets</h2></div>
         <div class="filters" role="group" aria-label="Filter seeds">
           <button type="button" data-f="all" aria-pressed="true">All</button>
           <button type="button" data-f="veg" aria-pressed="false">Vegetables</button>
@@ -64,22 +52,22 @@
     </div>
   </section>
 
-  <div class="divider" aria-hidden="true"></div>
   <section class="sow" id="sow">
     <div class="wrap">
+      <p class="eyebrow">02 · Guide</p>
       <h2>When to sow in New York</h2>
       <div class="sow-list">
-        <div><h3>March to April</h3><p>Start tomatoes, peppers and basil indoors on a bright windowsill. Sow peas and spinach outside once the soil thaws.</p></div>
-        <div><h3>Mid May</h3><p>After the last frost, move seedlings out and sow cucumbers, zinnias, sunflowers and nasturtiums straight into the pot.</p></div>
-        <div><h3>August</h3><p>Sow lettuce, cilantro and radishes again for a second harvest that lasts through the first frost in November.</p></div>
+        <div><span>01</span><h3>March to April</h3><p>Start tomatoes, peppers and basil indoors on a bright windowsill. Sow peas and spinach outside once the soil thaws.</p></div>
+        <div><span>02</span><h3>Mid May</h3><p>After the last frost, move seedlings out and sow cucumbers, zinnias, sunflowers and nasturtiums straight into the pot.</p></div>
+        <div><span>03</span><h3>August</h3><p>Sow lettuce, cilantro and radishes again for a second harvest that lasts through the first frost in November.</p></div>
       </div>
     </div>
   </section>
 
-  <div class="divider" aria-hidden="true"></div>
   <section class="visit" id="visit">
     <div class="wrap">
       <div>
+        <p class="eyebrow">03 · Visit</p>
         <h2>Come say hello</h2>
         <p>Visit the shop to flip through the packets and ask us what to plant in your north-facing window. Orders placed online can be picked up in store the same day or shipped within New York State.</p>
         <form class="news" id="news">
@@ -95,7 +83,7 @@
       </div>
     </div>
   </section>
-<pre class="bed" aria-hidden="true"></pre>
+  <pre class="bed" aria-hidden="true"></pre>
 </main>
 
 <footer>© 2026 The Garden Store, New York City.</footer>
@@ -106,7 +94,6 @@
   <div id="cartBody"></div>
 </aside>
 
-<script src="intro.js"></script>
 <script src="garden.js"></script>
 <script src="script.js"></script>
 </body>
