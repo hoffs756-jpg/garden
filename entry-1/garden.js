@@ -86,16 +86,4 @@ _(_)_
 
   // little rose-vine dividers
   document.querySelectorAll(".divider").forEach(d => { d.textContent = "@}-;--- ".repeat(60); });
-
-  // drifting stars and sparkles
-  const sp = document.createElement("div");
-  sp.className = "sparkles"; sp.setAttribute("aria-hidden", "true");
-  for (let i = 0; i < 18; i++) {
-    const s = document.createElement("span");
-    s.textContent = Math.random() < 0.5 ? "★" : "✦";
-    s.style.cssText = `left:${Math.random() * 98}%;top:${Math.random() * 98}%;font-size:${10 + Math.random() * 16}px;` +
-      `color:var(${Math.random() < 0.55 ? "--pink" : "--moss"});animation-duration:${4 + Math.random() * 6}s;animation-delay:${-Math.random() * 8}s`;
-    sp.append(s);
-  }
-  document.body.prepend(sp);
 })();

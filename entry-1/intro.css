@@ -1,7 +1,7 @@
 /* Intro: tree frame with a photo cutout */
 :root{
-  --bark:#8a5a2b; --trunk:#faf3df;
-  --lf-pale:#fbfdf0; --lf-mid:#cfe6a3; --lf-dark:#86b872; --lf-line:#1f5a2a;
+  --bark:#b99a72; --trunk:#fdf9ee;
+  --lf-pale:#fbfdf0; --lf-mid:#cfe6a3; --lf-dark:#86b872; --lf-line:#6f9a63;
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
@@ -50,7 +50,7 @@
 @keyframes sway{from{transform:rotate(-.7deg)}to{transform:rotate(.7deg)}}
 
 /* intro text */
-.intro h1{font-size:clamp(26px,4vw,40px);color:var(--forest);letter-spacing:.05em;margin:22px auto 12px;max-width:24ch}
+.intro h1{font-size:clamp(26px,4vw,40px);color:var(--forest);letter-spacing:0;margin:22px auto 12px;max-width:24ch}
 .intro p{max-width:50ch;margin:0 auto 22px}
 .intro .note{margin-top:26px}
 
